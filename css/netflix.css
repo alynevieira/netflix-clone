@@ -1,0 +1,399 @@
+:root {
+	--color-white: #f4f4f4;
+	--color-white--light: #ffffff;
+	--color-gray--light: #dddddd;
+	--color-gray--medium: #ebebeb;
+	--color-gray--dark: #9c9c9c;
+	--color-red: #d81f26;
+	--color-red--dark: #bb1b21;
+	--color-green: #12ff12;
+	--color-black: #131313;
+	--color-black--light: #191919;
+	--color-black--dark: #000000;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	color: var(--color-white);
+
+	background: var(--color-black--light);
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-white--light);
+	font-weight: bold;
+}
+
+p,
+a {
+	font-weight: 300;
+	line-height: 1.4rem;
+	letter-spacing: 0.03rem;
+}
+
+.aside-bar {
+	width: 110px;
+	height: 100vh;
+	position: fixed;
+
+	background-color: var(--color-black);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: column;
+
+	z-index: 1;
+}
+
+.brand {
+	width: 2rem;
+}
+
+.navbar--links {
+	height: 15rem;
+	list-style: none;
+
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+
+	transition: 0.2s ease all;
+}
+
+.active--link,
+.navbar--link:hover {
+	border-bottom: 2px solid var(--color-red);
+	background-clip: content-box;
+	padding: 0.3rem 0;
+}
+
+.navbar--icon {
+	width: 20px;
+	height: 20px;
+
+	color: var(--color-white);
+}
+
+.st0 {
+	fill: none;
+	stroke: var(--color-white);
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-miterlimit: 10;
+}
+
+/* main */
+.content-main {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 110px 1fr;
+	grid-template-rows: 1fr 60px;
+	grid-template-areas:
+			"sidebar main"
+			"sidebar footer";
+}
+
+.aside-bar {
+	grid-area: sidebar;
+}
+
+.main {
+	grid-area: main;
+}
+
+.landing {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("/img/netflix/theme.jpg") 0 0 no-repeat;
+	height: 500px;
+
+	width: 100vw;
+	background-size: cover;
+}
+
+.container {
+	position: relative;
+	top: 6rem;
+	left: 5rem;
+
+	margin-right: 43rem;
+}
+
+.content--title {
+	font-size: 5rem;
+}
+
+.content--description {
+	margin-bottom: 1.5rem;
+}
+
+.button-landing {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: var(--color-white);
+	font-weight: 300;
+	border: none;
+
+	padding: 15px 25px;
+	margin-right: 25px;
+
+	cursor: pointer;
+	transition: 0.3s ease all;
+
+	display: inline-flex;
+}
+
+.button-landing .path {
+	fill: var(--color-white);
+}
+
+.button-landing:hover {
+	background-color: var(--color-white);
+	color: var(--color-black--light);
+}
+
+.button-landing:hover .path {
+	fill: var(--color-black--light);
+}
+
+.carousel {
+	position: relative;
+	top: 10rem;
+}
+
+.container-fluid {
+	position: relative;
+	width: 100%;
+}
+
+.mt--4 {
+	margin-top: -4rem;
+}
+
+.mt--2 {
+	margin-top: -2rem;
+}
+
+.carousel--last {
+	margin-bottom: 10rem;
+}
+
+.carousel--title {
+	position: relative;
+	left: 4rem;
+
+	font-weight: 600;
+
+	margin-bottom: 0.5rem;
+}
+
+.carousel--serie {
+	padding-bottom: 1.5rem;
+}
+
+.carousel--position {
+	top: -2rem;
+}
+
+.owl-item.active {
+	transition: all 0.2s ease-in-out;
+}
+
+.grow {
+	transition: all 0.2s ease-in-out;
+}
+
+.item-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	padding: 1rem;
+
+	opacity: 0;
+}
+
+.item-content--title {
+	font-weight: 600;
+}
+
+.item-content--text {
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.item-content--text span {
+	color: var(--color-green);
+	font-weight: 600;
+}
+
+.owl-stage-outer {
+	padding: 6.5rem;
+}
+
+.owl-stage {
+	position: absolute !important;
+	top: 30px;
+}
+
+.grow .content-overlay {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.owl-item.active:hover {
+	margin-left: 4.2rem !important;
+    margin-right: 4.5rem !important;
+}
+
+.grow:hover {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+
+.grow:hover .item-content {
+	opacity: 1;
+}
+
+.grow:hover .content-overlay{
+  opacity: 1;
+}
+
+.grow:hover ~ .grow {
+	position: relative;
+	transition: 0.6s ease-out;
+}
+
+.footer {
+	grid-area: footer;
+	background-color: var(--color-black--dark);
+}
+
+@media only screen and (max-width: 768px) {
+	.content-main {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1.5fr 0.1fr 0;
+		grid-template-areas:
+			"main"
+			"sidebar"
+			"footer";
+	}
+
+	.aside-bar {
+		width: 100vw;
+		height: 5rem;
+		bottom: 0;
+
+		justify-content: space-evenly;
+		flex-flow: initial;
+
+		z-index: 5;
+	}
+
+	.brand {
+		width: 1rem;
+	}
+
+	.navbar--links {
+		width: 15rem;
+		height: 1.2rem;
+		justify-content: space-around;
+		flex-flow: initial;
+	}
+
+	main {
+		position: relative;
+		margin-left: 0;
+
+		min-height: 100vh;
+	}
+
+	.container {
+		position: relative;
+		top: 5rem;
+		left: 3rem;
+		margin-right: 6rem;
+	}
+
+	.landing {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url(/img/netflix/theme.jpg);
+		background-position-x: 60rem;
+		background-size: cover;
+
+		height: 100vh;
+	}
+
+	.content--title {
+		font-size: 4.5rem;
+	}
+
+	.content--buttons {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content--buttons .button-landing {
+		margin-bottom: 1rem;
+	}
+
+	.carousel {
+		top: 15rem;
+		left: 0;
+	}
+
+	.carousel--title {
+		left: 2rem;
+	}
+
+	.carousel--item {
+		margin-bottom: 1rem;
+	}
+
+	.owl-stage-outer {
+		padding: 7.5rem 10px;
+	}
+
+	.owl-item.active:hover {
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	.grow:hover {
+		transform: scale(1);
+	}
+
+	.item-content {
+		bottom: 30px;
+	
+		padding: 0.8rem;
+	}
+
+	.item-content--text {
+		font-size: 12px;
+		line-height: 12px;
+	}
+}

@@ -1,0 +1,96 @@
+:root {
+    --color-white: #F4F4F4;
+    --color-white--light: #FFFFFF;
+    --color-gray--light: #DDDDDD;
+    --color-gray--medium: #EBEBEB;
+    --color-gray--dark: #9c9c9c;
+    --color-red: #D81F26;
+    --color-red--dark: #BB1B21;
+    --color-black: #131313;
+    --color-black--light: #191919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-white);
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-weight: bold;
+}
+
+p, a {
+    font-weight: 400;
+}
+
+.first-landing {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background-color: var(--color-black);
+}
+
+.profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile {
+    padding: 3rem;
+    text-align: center;
+} 
+
+.profile--image-netflix {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.5rem;
+
+    background-image: radial-gradient(var(--color-white), var(--color-gray--dark)) 
+}
+
+.profile--image-netflix:hover {
+    cursor: pointer;
+    border: 5px solid var(--color-white);
+}
+
+.profile--image-nintendo:hover {
+    cursor: pointer;
+    border: 5px solid var(--color-white);
+}
+
+.profile--image-nintendo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.5rem;
+
+    background-image: radial-gradient(var(--color-red), var(--color-red--dark)) 
+}
+
+.profile--image-nintendo img {
+    width: 8rem;
+}
