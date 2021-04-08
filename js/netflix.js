@@ -1,6 +1,7 @@
 var navbar = document.getElementById("nav");
 var link = navbar.getElementsByClassName("navbar--link");
 
+
 for (var i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active--link");
