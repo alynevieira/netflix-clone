@@ -15,7 +15,7 @@
 	<title>Netflix Clone</title>
 </head>
 
-<body>
+<body onload="showList()">
 	<div class="content-main">
 		<aside class="aside-bar">
 			<a href="netflix.html">
@@ -106,10 +106,8 @@
 		<main class="main">
 			<div class="landing">
 				<div class="content--about">
-					<h1 class="content--title">The Witcher</h1>
-					<p class="content--description">O mutante Geralt de Rívia é um caçador de monstros que luta para
-						encontrar seu lugar num mundo onde as pessoas muitas vezes são mais
-						perversas que as criaturas selvagens.</p>
+					<h1 class="content--title" id="landing--title"></h1>
+					<p class="content--description" id="landing--subtitle"></p>
 
 					<div class="content--buttons">
 						<button type="button" class="button-landing">
@@ -134,7 +132,7 @@
 
 							&nbsp; VER TRAILER
 						</button>
-						<button type="button" class="button-landing">
+						<button type="button" class="button-landing" id="button--infomation">
 
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -168,7 +166,7 @@
 				</div>
 			</div>
 
-			<div class="container-fluid mt--2 ">
+			<div class="container-fluid mt--2 mb-4">
 				<div class="carousel--item">
 					<h2 class="carousel--title">Filmes mais vistos</h2>
 

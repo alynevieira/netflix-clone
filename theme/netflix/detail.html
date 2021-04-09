@@ -15,7 +15,7 @@
 	<title>Netflix Clone</title>
 </head>
 
-<body>
+<body onload="showDetails()">
 	<div class="content-main">
 		<aside class="aside-bar">
 			<a href="netflix.html">
@@ -44,7 +44,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="navbar--link">
+						<a href="series.html" class="navbar--link">
 							<svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg" class="navbar--icon">
 								<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<g transform="translate(-849.000000, -2505.000000)">
@@ -64,7 +64,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="navbar--link">
+						<a href="movies.html" class="navbar--link">
 							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 								class="navbar--icon" x="0px" y="0px" viewBox="0 0 32 32"
 								style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -77,7 +77,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="navbar--link">
+						<a href="mylist.html" class="navbar--link">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 								class="feather feather-plus navbar--icon">
@@ -104,14 +104,14 @@
 		</aside>
 
 		<main class="main">
-			<div class="content--detail" id="image"> 
 
+			<div class="content--detail" id="image"> 
 				<div class="content--about-detail">
 					<h1 class="content--title" id="title"></h1>
 					<p class="content--description" id="subtitle"></p>
 					<p class="content--description" id="text"></p>
 
-					<div class="content--buttons">
+					<div class="content--buttons" id="detail">
 						<button type="button" class="button-landing">
 
 							<svg viewBox="0 0 11 14" xmlns="http://www.w3.org/2000/svg" width="11px" height="14px">
@@ -134,11 +134,16 @@
 
 							&nbsp; VER TRAILER
 						</button>
+
+						<div class="add-list button-detail--list" onclick="addList(this)">
+							<div class="plus--one"></div>
+							<div class="plus--two"></div>
+						</div>
+
 					</div>
-
 				</div>
-
 			</div>
+
 		</main>
 	</div>
 
