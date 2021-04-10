@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="img/readme.png" alt="Projeto Netflix" />
+  <img src="https://i.ibb.co/Dw99gKf/readme.png" alt="Projeto Netflix" />
 
   <a href="https://alynevieira.github.io/netflix-clone/index.html">Demo</a>
 </div>
