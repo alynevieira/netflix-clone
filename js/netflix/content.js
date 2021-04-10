@@ -45,7 +45,7 @@ var movies = [
     movie: false,
     title: "Lucifer",
     description: "Lucifer está entediado e infeliz como o Senhor do Inferno e decide tirar férias em Los Angeles, onde vira dono de uma casa noturna com ajuda de sua serva Mazikeen.",
-    imageSmall: "img/netflix/lucifer.jpg",
+    imageSmall: "img/netflix/Lucifer.jpg",
     imageLarge: "img/netflix/large/lucifer.jpg",
     rating: "96",
     year: "2016",
